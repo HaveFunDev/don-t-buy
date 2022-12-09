@@ -1,0 +1,11 @@
+.container {
+	padding-top: 0.5rem;
+	.name {
+		color: var(--text-color);
+		padding: 0.5rem;
+	}
+	.checkbox {
+		padding: 1rem;
+		accent-color: var(--primary-color);
+	}
+}
