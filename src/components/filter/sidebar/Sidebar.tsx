@@ -22,11 +22,11 @@ const platforms = [
 
 const Sidebar = () => {
 	return (
-		<div className={styles.sidebar}>
+		<aside className={styles.sidebar}>
 			<CheckBlock title="Categories" elements={categories} />
 			<CheckBlock title="Platforms" elements={platforms} />
 			<button className={styles["apply-btn"]}>Apply Filters</button>
-		</div>
+		</aside>
 	);
 };
 
