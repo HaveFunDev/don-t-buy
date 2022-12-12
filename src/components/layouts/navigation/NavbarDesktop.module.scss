@@ -1,0 +1,50 @@
+@import './../../../assets/_colors';
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2em;
+	font-size: 1rem;
+
+
+	&__categories {
+		display: flex;
+		align-items: center;
+		&-list {
+			display: flex;
+			list-style: none;
+		}
+		&-item {
+			margin-right: 2em;
+			color: $text-color;
+			transition: color 0.5s;
+			cursor: pointer;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	&__box {
+	}
+	&__btn {
+		background: none;
+		border: none;
+		padding: 1em;
+		margin-right: 1em;
+		cursor: pointer;
+
+		&:hover .nav__btn-icon {
+			color: $primary-color;
+		}
+		&-icon {
+			transition: color 0.5s;
+			color: $text-color;
+			font-size: 1.1rem;
+		}
+	}
+}
+
+.test{
+	display: flex;
+}

@@ -1,11 +1,12 @@
 import { BrowserRouter } from "react-router-dom";
 import Sidebar from "./components/filter/sidebar/Sidebar";
-import Navbar from './components/layouts/navigation/Navbar'
-
+import NavbarDesktop from './components/layouts/navigation/NavbarDesktop'
+import Navbar from "./components/layouts/navigation/Navbar";
 function App() {
 	return (
 		<div>
-			<Navbar />
+			{/* <NavbarDesktop /> */}
+			<Navbar/>
 			<BrowserRouter>
 				{/* Please change it later to styles.container */}
 				<div className="container">
