@@ -1,12 +1,13 @@
 import styles from './NavbarButtons.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping,faHeart,faGamepad,faFaceSmile} from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping,faHeart,faGamepad,faFaceSmile,faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 
 const haveFunIcon = <FontAwesomeIcon icon={faGamepad} className={styles['btn__icon']} />
 const cartIcon = <FontAwesomeIcon icon={faCartShopping} className={styles['btn__icon']} />
 const favouriteIcon = <FontAwesomeIcon icon={faHeart} className={styles['btn__icon']} />
 const profileIcon = <FontAwesomeIcon icon={faFaceSmile} className={styles['btn__icon']} />
+
 
 const NavbarButtons = () => {
 	return (

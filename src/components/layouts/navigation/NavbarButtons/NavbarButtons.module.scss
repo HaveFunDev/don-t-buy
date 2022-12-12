@@ -1,6 +1,9 @@
-@import './../../../assets/_colors';
+@import './../../../../assets/_colors';
 
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {

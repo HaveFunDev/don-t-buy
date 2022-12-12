@@ -1,0 +1,61 @@
+@import './../../../../assets/_colors';
+
+.items { 
+	position: absolute;
+	background-color: $sidebar-color;
+	color: $text-color;
+	transform: translateX(-400px);
+	transition: transform 0.7s;
+	top: 70px;
+	left: 0;
+	padding: 1em;
+	height: 100vh;
+
+	@media(min-width:576px){
+		min-width:50%
+	}
+	@media (min-width: 768px) {
+		height: auto;
+		min-width: auto;
+		position: relative;
+		top: 0;
+		transform: translateX(0);
+		width: auto;
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	&__list {
+		list-style: none;
+	
+
+		@media (min-width: 768px) {
+			display: flex;
+			color: $text-color;
+		}
+
+		&-item {
+			border-radius: 8px;
+			padding: 1em;
+			cursor: pointer;
+			transition: all 0.5s;
+			&:hover {
+				background-color: $text-color;
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+.btns{
+	@media(min-width: 576px){
+		display: none;
+	}
+}
+
+.active {
+	transform: translateX(0);
+}
