@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Sidebar from "./components/filter/sidebar/Sidebar";
-import Navbar from './components/navigation/Navbar'
+import Navbar from './components/layouts/navigation/Navbar'
 
 function App() {
 	return (

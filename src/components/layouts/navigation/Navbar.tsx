@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse,faCartShopping,faHeart,faGamepad,faFaceSmile} from '@fortawesome/free-solid-svg-icons'
 
+import Wrapper from '../../wrapper/Wrapper'
+
 import styles from './Navbar.module.scss'
 
 const homeIcon = <FontAwesomeIcon icon={faHouse} className={styles['nav__btn-icon']} />
@@ -16,7 +18,8 @@ const categories = [
 
 
 const Navbar = () => {
-return <nav className={styles.nav}>
+return  <Wrapper>
+<nav className={styles.nav}>
     <div className={styles['nav__categories']}>
     <button className={styles['nav__btn']}>{homeIcon}</button>
    <ul className={styles['nav__categories-list']}>
@@ -32,6 +35,7 @@ return <nav className={styles.nav}>
    </div>
 
 </nav>
+   </Wrapper>
 }
 
 
