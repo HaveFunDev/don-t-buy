@@ -1,5 +1,6 @@
+@import "../../../assets/_colors";
 .sidebar {
-	background-color: var(--sidebar-color);
+	background-color: $sidebar-color;
 	width: 20%;
 	border-radius: 20px;
 	padding: 2rem;
@@ -11,8 +12,8 @@
 		border-radius: 30px;
 		font-size: 1.2rem;
 		font-weight: bold;
-		color: var(--bg-color);
-		background-color: var(--primary-color);
+		color: $background-color;
+		background-color: $primary-color;
 		cursor: pointer;
 	}
 }
