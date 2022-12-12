@@ -4,8 +4,11 @@ import NavbarButtons from '../NavbarButtons/NavbarButtons'
 // This categories have to be dynamic
 const categories = ['Streams', 'Game Store', 'News', 'Other']
 
-// change this props to tsx standard
-const NavbarItems = props => {
+
+interface Props {
+	handleNav: boolean;
+}
+const NavbarItems = (props:Props) => {
 	return (
 		<div className={`${styles.items} ${props.handleNav ? styles.active : ''}`}>
 			<div className={styles.btns}>
