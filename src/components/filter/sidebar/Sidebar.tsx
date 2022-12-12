@@ -20,12 +20,21 @@ const platforms = [
 	"Nintendo Switch",
 ];
 
-const Sidebar = () => {
+interface Props {
+	showSidebar: boolean;
+	applyFilters: () => void;
+}
+
+const Sidebar = (props: Props) => {
 	return (
-		<aside className={styles.sidebar}>
+		<aside
+			className={styles.sidebar}
+			style={{ display: props.showSidebar ? "block" : "none" }}>
 			<CheckBlock title="Categories" elements={categories} />
 			<CheckBlock title="Platforms" elements={platforms} />
-			<button className={styles["apply-btn"]}>Apply Filters</button>
+			<button onClick={props.applyFilters} className={styles["apply-btn"]}>
+				Apply Filters
+			</button>
 		</aside>
 	);
 };
