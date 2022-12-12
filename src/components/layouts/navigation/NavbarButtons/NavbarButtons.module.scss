@@ -7,18 +7,18 @@
 }
 
 .btn {
+    margin-right: 1em;
+    padding: 1em;
     background: none;
     border: none;
-    padding: 1em;
-    margin-right: 1em;
     cursor: pointer;
 
     &:hover .btn__icon {
         color: $primary-color;
     }
     &__icon {
-        transition: color 0.5s;
-        color: $text-color;
         font-size: 1.1rem;
+        color: $text-color;
+        transition: color 0.5s;
     }
 }
