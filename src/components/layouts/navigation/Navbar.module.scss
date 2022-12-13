@@ -4,11 +4,15 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 0 auto;
     padding: .5em;
     width: 100%;
+    max-width: 1200px;
     background-color: $background-color;
+
     z-index: 10000;
 }

@@ -1,0 +1,20 @@
+.hero {
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		overflow: hidden;
+		width: 70%;
+		height: 200px;
+
+        @media(min-width:768px){
+            height: 300px;
+        }
+	}
+	&__img {
+		display: block;
+		min-height: 100%;
+		min-width: 100%;
+	}
+}
