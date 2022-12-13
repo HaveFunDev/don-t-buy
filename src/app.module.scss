@@ -1,4 +1,4 @@
-@import "./assets//_colors";
+@import './assets//_colors';
 .sort-btn {
 	display: none;
 	width: 90%;
@@ -17,4 +17,12 @@
 	.sort-btn {
 		display: block;
 	}
+}
+
+.container {
+	margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+	margin-top: 6em;
+	display: flex;
 }

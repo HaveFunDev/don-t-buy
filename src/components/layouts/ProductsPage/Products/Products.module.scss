@@ -1,0 +1,55 @@
+@import './../../../../assets/_colors';
+
+.products {
+	&__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__item {
+		margin: 2em 1em;
+		padding: 1em;
+		background-color: $sidebar-color;
+		border-radius: 20px;
+		box-shadow: 2px 2px 15px black;
+		cursor: pointer;
+		&-img {
+			padding: 0.5em;
+			width: 200px;
+			border-radius: 20px;
+		}
+		&-title{
+			color:$title-color;
+		}
+		&-platform {
+			color: $text-color;
+		}
+		&-box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 0.5em;
+		}
+		&-price {
+			font-size: 1.3rem;
+			color: $primary-color;
+			font-weight: bold;
+		}
+		&-btn {
+			width: 60%;
+			padding: 0.8em;
+			border-radius: 20px;
+            border: none;
+            background-color: $primary-color;
+			box-shadow: 2px 2px 15px black;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color .5s;
+			cursor: pointer;
+            &:hover{
+                background-color: $primary-color-hover;
+            }
+		}
+	}
+}
