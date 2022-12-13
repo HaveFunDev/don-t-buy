@@ -4,7 +4,6 @@ import { Spin as Hamburger } from 'hamburger-react'
 import NavbarItems from './NavbarItems/NavbarItems'
 import NavbarButtons from './NavbarButtons/NavbarButtons'
 import NavbarHeader from './NavbarHeader/NavbarHeader'
-
 import styles from './Navbar.module.scss'
 
 const Navbar = () => {
@@ -26,6 +25,7 @@ const Navbar = () => {
 			<NavbarItems handleNav={isOpen} />
 			<NavbarHeader />
 			{matchesSM && <NavbarButtons />}
+
 		</nav>
 	)
 }
