@@ -29,11 +29,11 @@ const Sidebar = (props: Props) => {
 	const sidebar = useRef<HTMLElement | null>(null);
 
 	const applyFilters = () => {
-		sidebar.current?.classList.add(styles.show);
+		sidebar.current?.classList.add(styles.hide);
 	};
 
 	useEffect(() => {
-		sidebar.current?.classList.toggle(styles.show);
+		sidebar.current?.classList.toggle(styles.hide);
 	}, [props.toggleSidebar]);
 
 	return (
