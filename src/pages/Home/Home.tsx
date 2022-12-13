@@ -1,27 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ProductsPage from "../../components/layouts/ProductsPage/ProductsPage";
 import Sidebar from "../../components/sidebar/Sidebar";
 import styles from "./Home.module.scss";
 
 const Home = () => {
-	const [showSidebar, setShowSidebar] = useState(false);
+	const [toggleSidebar, setToggleSidebar] = useState(false);
 
-	useEffect(() => {
-		if (window.innerWidth > 768) {
-			setShowSidebar(true);
-		}
-	}, []);
-
-	const applyFilters = () => {
-		if (window.innerWidth < 768) {
-			setShowSidebar(false);
-		}
-	};
 	return (
 		<div className={styles.container}>
-			<Sidebar showSidebar={showSidebar} applyFilters={applyFilters} />
+			<Sidebar toggleSidebar={toggleSidebar} />
 			<button
-				onClick={() => setShowSidebar(true)}
+				onClick={() => setToggleSidebar((prev) => !prev)}
 				className={styles["sort-btn"]}>
 				Sort and filter
 			</button>

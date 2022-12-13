@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import CheckBlock from "./check-block/CheckBlock";
 import styles from "./Sidebar.module.scss";
 
@@ -21,18 +22,25 @@ const platforms = [
 ];
 
 interface Props {
-	showSidebar: boolean;
-	applyFilters: () => void;
+	toggleSidebar: boolean;
 }
 
 const Sidebar = (props: Props) => {
+	const sidebar = useRef<HTMLElement | null>(null);
+
+	const applyFilters = () => {
+		sidebar.current?.classList.add(styles.show);
+	};
+
+	useEffect(() => {
+		sidebar.current?.classList.toggle(styles.show);
+	}, [props.toggleSidebar]);
+
 	return (
-		<aside
-			className={styles.sidebar}
-			style={{ display: props.showSidebar ? "block" : "none" }}>
+		<aside className={styles.sidebar} ref={sidebar}>
 			<CheckBlock title="Categories" elements={categories} />
 			<CheckBlock title="Platforms" elements={platforms} />
-			<button onClick={props.applyFilters} className={styles["apply-btn"]}>
+			<button className={styles["apply-btn"]} onClick={applyFilters}>
 				Apply Filters
 			</button>
 		</aside>
