@@ -1,4 +1,4 @@
-.container{
+.container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -6,5 +6,8 @@
 	width: 80%;
 }
 
-
-
+@media (max-width: 786px) {
+	.container {
+		width: 100%;
+	}
+}
