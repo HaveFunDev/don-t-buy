@@ -14,9 +14,14 @@
 		border-radius: 20px;
 		box-shadow: 2px 2px 15px black;
 		cursor: pointer;
+		max-width: 235px;
 		&-img {
 			padding: 0.5em;
-			width: 200px;
+			min-width: 200px;
+			max-width: 200px;
+			min-height: 230px;
+			max-height: 230px;
+			// object-fit: scale-down;
 			border-radius: 20px;
 		}
 		&-title{
@@ -29,7 +34,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			margin-top: 0.5em;
+			margin-top: 0.7em;
 		}
 		&-price {
 			font-size: 1.3rem;
