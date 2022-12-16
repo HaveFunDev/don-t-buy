@@ -1,4 +1,4 @@
-import styles from './Products.module.scss'
+import styles from './GameCard.module.scss'
 
 const productList = [
 	{
@@ -38,7 +38,7 @@ const productList = [
 	},
 ]
 
-const Products = () => {
+const GameCard = () => {
 	return (
 		<div className={styles['products__container']}>
 			{productList.map(product => {
@@ -58,4 +58,4 @@ const Products = () => {
 	)
 }
 
-export default Products
+export default GameCard
