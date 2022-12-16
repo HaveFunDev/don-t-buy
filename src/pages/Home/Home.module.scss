@@ -1,33 +1,47 @@
 @import "../../assets/_colors";
-.sort-btn {
-	display: none;
-	width: 90%;
-	padding: 1.2rem;
-	margin: 10rem auto auto;
-	border: none;
-	border-radius: 30px;
-	font-size: 1.2rem;
-	font-weight: bold;
-	color: $background-color;
-	background-color: $primary-color;
-	cursor: pointer;
-}
+
 .container {
 	margin: 0 auto;
-	width: 100%;
-	max-width: 1200px;
+	width: 97%;
 	margin-top: 6em;
 	display: flex;
+	max-width: 1200px;
+	.main-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		width: 70%;
+		margin: 0 0 2rem 3rem;
+		.sort-btn {
+			display: none;
+			width: 80%;
+			padding: 1.2rem;
+			margin: 10rem auto auto;
+			border: none;
+			border-radius: 30px;
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: $background-color;
+			background-color: $primary-color;
+			cursor: pointer;
+		}
+	}
 }
 
 @media (max-width: 1024px) {
-	.sort-btn {
-		display: block;
-		margin: 6rem;
-	}
 	.container {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-top: 4em;
+		.main-content {
+			width: 100%;
+			margin-left: 0;
+			.sort-btn {
+				display: block;
+				margin: 1.2rem;
+			}
+		}
 	}
 }
