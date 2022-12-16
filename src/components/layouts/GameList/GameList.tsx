@@ -8,7 +8,7 @@ const GameList = () => {
 		<div className={styles.container}>
 			<HeroImg />
 			<GameCard />
-			<Test/>
+			{/* <Test/> */}
 		</div>
 	)
 }

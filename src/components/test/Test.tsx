@@ -29,7 +29,8 @@ const Test = () => {
 						<h1>title:{game.name}</h1>
                         <p>platform:{game.platform}</p>
                         <p>price:{game.price}</p>
-                        {game.gallery && <img src={game.gallery[0]} alt="" />}
+						{game.gallery && <img src={game.gallery[0]} alt="" /> }
+						
 					</div>
 				)
 			})}
