@@ -1,0 +1,16 @@
+@import "../../../assets/_colors";
+
+.header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__heading {
+		color: $text-color;
+	}
+	&__icon {
+		margin-left: 0.5em;
+		font-size: 2rem;
+		color: $primary-color;
+	}
+}

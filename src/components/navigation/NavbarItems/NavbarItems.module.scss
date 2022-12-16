@@ -1,6 +1,6 @@
-@import './../../../../assets/_colors';
+@import "../../../assets/_colors";
 
-.items { 
+.items {
 	position: absolute;
 	top: 63px;
 	left: 0;
@@ -11,8 +11,8 @@
 	transform: translateX(-400px);
 	transition: transform 0.7s;
 
-	@media(min-width:576px){
-		min-width:50%
+	@media (min-width: 576px) {
+		min-width: 50%;
 	}
 	@media (min-width: 768px) {
 		position: relative;
@@ -26,12 +26,10 @@
 		min-width: auto;
 		transform: translateX(0);
 		background-color: transparent;
-		
 	}
 
 	&__list {
 		list-style: none;
-	
 
 		@media (min-width: 768px) {
 			display: flex;
@@ -51,8 +49,8 @@
 	}
 }
 
-.btns{
-	@media(min-width: 576px){
+.btns {
+	@media (min-width: 576px) {
 		display: none;
 	}
 }
