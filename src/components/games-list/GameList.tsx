@@ -31,7 +31,6 @@ const GameList = () => {
 					platform={game.platform}
 					price={game.price}
 					gallery={game.gallery[0]}
-					data={games}
 				/>
 			))}
 		</div>
