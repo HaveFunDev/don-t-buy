@@ -1,62 +1,37 @@
 import styles from "./GameList.module.scss";
+import { useState,useEffect } from "react";
 import GameCard from "../game-card/GameCard";
 import { collection, getDocs } from 'firebase/firestore'
-const productList = [
-	{
-		id: "eldenring",
-		title: "Elden Ring",
-		platform: "PS4",
-		price: 199,
-		gallery: [
-			"https://ecsmedia.pl/c/elden-ring-edycja-premierowa-b-iext121266583.jpg",
-		],
-	},
-	{
-		id: "bloodborne",
-		title: "Bloodborne",
-		platform: "PS4",
-		price: 39,
-		gallery: ["https://gameon.pl/1231/bloodborne-ps4-uzywana-pl.jpg"],
-	},
-	{
-		id: "bloodborne",
-		title: "Bloodborne",
-		platform: "PS4",
-		price: 39,
-		gallery: ["https://gameon.pl/1231/bloodborne-ps4-uzywana-pl.jpg"],
-	},
-	{
-		id: "bloodborne",
-		title: "Bloodborne",
-		platform: "PS4",
-		price: 39,
-		gallery: ["https://gameon.pl/1231/bloodborne-ps4-uzywana-pl.jpg"],
-	},
-	{
-		id: "bloodborne",
-		title: "Bloodborne",
-		platform: "PS4",
-		price: 39,
-		gallery: ["https://gameon.pl/1231/bloodborne-ps4-uzywana-pl.jpg"],
-	},
-];
+import { db } from '../../firebase'
+
+
 
 const GameList = () => {
-	
+	const [games, setGames] = useState([])
 
+	const gamesCollectionRef = collection(db, 'games')
 
+	useEffect(() => {
+		const getGames = async () => {
+			const data= await getDocs(gamesCollectionRef)
+			setGames(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
+		}
 
+		getGames()
+	}, [])
 
 
 	return (
 		<div className={styles.container}>
-			{productList.map((product) => (
+			{games.map((game) => (
 				<GameCard
-					key={product.id}
-					id={product.id}
-					title={product.title}
-					platform={product.platform}
-					price={product.price}
+					key={game.id}
+					id={game.id}
+					title={game.title}
+					platform={game.platform}
+					price={game.price}
+					gallery={game.gallery[0]}
+					data={games}
 				/>
 			))}
 		</div>
