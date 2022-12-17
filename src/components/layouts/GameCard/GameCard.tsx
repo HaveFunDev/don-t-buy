@@ -1,6 +1,6 @@
 import styles from './GameCard.module.scss'
 import { useState, useEffect } from 'react'
-import { db } from './../../../../firebase'
+import { db } from '../../../firebase'
 import { collection, getDocs } from 'firebase/firestore'
 
 // const productList = [
@@ -74,9 +74,7 @@ const GameCard = () => {
 			{games.map(game => {
 				return (
 					<div key={game.id} className={styles['products__item']}>
-						{game.gallery && (
-							<img className={styles['products__item-img']} src={game.gallery[0]} alt={`${game.title}cover`} />
-						)}
+						<img className={styles['products__item-img']} src={game.gallery[0]} alt={`${game.title}cover`} />
 						<h3 className={styles['products__item-title']}>{game.title}</h3>
 						<p className={styles['products__item-platform']}>{game.platform}</p>
 						<div className={styles['products__item-box']}>
