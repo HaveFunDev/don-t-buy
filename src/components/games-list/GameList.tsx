@@ -1,6 +1,6 @@
 import styles from "./GameList.module.scss";
 import GameCard from "../game-card/GameCard";
-
+import { collection, getDocs } from 'firebase/firestore'
 const productList = [
 	{
 		id: "eldenring",
@@ -42,6 +42,12 @@ const productList = [
 ];
 
 const GameList = () => {
+	
+
+
+
+
+
 	return (
 		<div className={styles.container}>
 			{productList.map((product) => (
