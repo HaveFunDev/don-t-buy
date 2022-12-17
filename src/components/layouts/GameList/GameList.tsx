@@ -31,9 +31,6 @@ const GameList = () => {
 		getGames()
 	}, [])
 
-// console.log(games.map(game=> game));
-
-
 	return (
 	
 
