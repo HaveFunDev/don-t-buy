@@ -6,6 +6,8 @@ import { db } from '../../firebase'
 
 
 
+
+
 const GameList = () => {
 	const [games, setGames] = useState([])
 
