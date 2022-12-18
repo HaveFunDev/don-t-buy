@@ -5,7 +5,17 @@ import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../firebase'
 
 
+interface Game{
+id:string;
+title:string;
+platform:string;
+price:number;
+gallery:string;
+}
 
+interface Document{
+
+}
 
 
 const GameList = () => {
@@ -25,7 +35,7 @@ const GameList = () => {
 
 	return (
 		<div className={styles.container}>
-			{games.map((game) => (
+			{games.map((game:Game) => (
 				<GameCard
 					key={game.id}
 					id={game.id}
