@@ -1,50 +1,31 @@
 import styles from "./GameList.module.scss";
-import { useState,useEffect } from "react";
 import GameCard from "../game-card/GameCard";
-import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../../firebase'
+import { useGetCollectionData } from "../../hooks/useGetCollectionData";
 
-
-interface Game{
-id:string;
-title:string;
-platform:string;
-price:number;
-gallery:string;
+interface Game {
+	id: string;
+	title: string;
+	platform: string;
+	price: number;
+	gallery: string;
 }
-
-interface Document{
-
-}
-
 
 const GameList = () => {
-	const [games, setGames] = useState([])
-
-	const gamesCollectionRef = collection(db, 'games')
-
-	useEffect(() => {
-		const getGames = async () => {
-			const data= await getDocs(gamesCollectionRef)
-			setGames(data.docs.map(doc => ({ ...doc.data(), id: doc.id })))
-		}
-
-		getGames()
-	}, [])
-
+	const { data: games } = useGetCollectionData("games");
 
 	return (
 		<div className={styles.container}>
-			{games.map((game:Game) => (
-				<GameCard
-					key={game.id}
-					id={game.id}
-					title={game.title}
-					platform={game.platform}
-					price={game.price}
-					gallery={game.gallery[0]}
-				/>
-			))}
+			{games &&
+				games.map((game: Game) => (
+					<GameCard
+						key={game.id}
+						id={game.id}
+						title={game.title}
+						platform={game.platform}
+						price={game.price}
+						gallery={game.gallery[0]}
+					/>
+				))}
 		</div>
 	);
 };
