@@ -13,6 +13,11 @@ interface Game {
 }
 
 const GameList = () => {
+	const [filters, setFilters] = useState<any>();
+	useEffect(() => {
+		store.subscribe(() => setFilters(store.getState().filters));
+	}, []);
+
 	const { data: games } = useGetCollectionData("games");
 
 	return (
