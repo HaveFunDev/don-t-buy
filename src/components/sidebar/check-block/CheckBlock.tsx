@@ -11,7 +11,7 @@ const CheckBlock = (props: Props) => {
 		<div className={styles.container}>
 			<p className={styles.title}>{props.title}</p>
 			{props.elements.map((element) => (
-				<SelectElement name={element} />
+				<SelectElement key={element} name={element} />
 			))}
 		</div>
 	);

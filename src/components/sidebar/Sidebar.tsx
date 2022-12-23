@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef} from "react";
 import CheckBlock from "./check-block/CheckBlock";
 import styles from "./Sidebar.module.scss";
 

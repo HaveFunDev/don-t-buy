@@ -1,6 +1,8 @@
 import styles from "./GameList.module.scss";
 import GameCard from "../game-card/GameCard";
 import { useGetCollectionData } from "../../hooks/useGetCollectionData";
+import { store } from "../../store/index";
+import { useEffect, useRef, useState } from "react";
 
 interface Game {
 	id: string;
