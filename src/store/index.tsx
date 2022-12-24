@@ -3,7 +3,7 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const filterSlice = createSlice({
 	name: "filter",
 	initialState: {
-		filters: [""],
+		filters: ["Playstation 5"],
 	},
 	reducers: {
 		addFilter: (state, action) => {

@@ -5,7 +5,7 @@ import { store } from "../store/index";
 
 export const useGetCollectionData = (
 	collectionName: string,
-	filter?: string
+	filter?: string[]
 ) => {
 	const [data, setData] = useState<any>(null);
 	const [isCanceled, setIsCanceled] = useState(false);
@@ -13,7 +13,10 @@ export const useGetCollectionData = (
 
 	useEffect(() => {
 		const filterQuery = filter
-			? query(collection(db, collectionName), where("platform", "in", [filter]))
+			? query(
+					collection(db, collectionName),
+					where("platform", "in", [...filter])
+			  )
 			: collection(db, collectionName);
 		const getGames = async () => {
 			try {
