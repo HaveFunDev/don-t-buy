@@ -18,7 +18,10 @@ const GameList = () => {
 		store.subscribe(() => setFilters(store.getState().filters));
 	}, []);
 
-	const { data: games } = useGetCollectionData("games");
+	const { data: games } = useGetCollectionData("games", [
+		"PlayStation 5",
+		"PlayStation 4",
+	]);
 
 	return (
 		<div className={styles.container}>
