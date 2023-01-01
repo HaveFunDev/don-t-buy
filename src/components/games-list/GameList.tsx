@@ -13,10 +13,6 @@ price:number;
 gallery:string;
 }
 
-interface Document{
-
-}
-
 
 const GameList = () => {
 	const [games, setGames] = useState([])
