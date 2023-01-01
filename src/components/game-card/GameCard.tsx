@@ -12,7 +12,8 @@ interface Props {
 const GameCard = (props:Props) => {
 
 	return <div key={props.id} className={styles['products__item']}>
-		<img className={styles['products__item-img']} src={props.gallery} alt={`${props.title} cover`} />
+		<div className={styles['products__item-img']} style={{backgroundImage:`url(${props.gallery})`}}></div>
+		{/* <img className={styles['products__item-img']} src={props.gallery} alt={`${props.title} cover`} /> */}
 		<h3 className={styles['products__item-title']}>{props.title}</h3>
 		<p className={styles['products__item-platform']}>{props.platform}</p>
 		<div className={styles['products__item-box']}>

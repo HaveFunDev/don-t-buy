@@ -1,16 +1,29 @@
-@import "../../assets/_colors";
+@import '../../assets/_colors';
 
 .products {
 	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		width: 30%;
+		height: 400px;
 		padding: 1em;
 		background-color: $sidebar-color;
 		border-radius: 20px;
 		cursor: pointer;
+		// &-img {
+		// 	padding: 0.5em;
+		// 	width: 100%;
+		// 	border-radius: 20px;
+		// }
 		&-img {
-			padding: 0.5em;
-			width: 100%;
+			width: 200px;
+			height: 250px;
+			background-position: center;
+			background-size: cover;
+			margin: auto;
 			border-radius: 20px;
+			margin-bottom: 1em;
 		}
 		&-title {
 			color: $title-color;
@@ -54,3 +67,5 @@
 		}
 	}
 }
+
+
